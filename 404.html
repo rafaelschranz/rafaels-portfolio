@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Sun Sep 28 2025 09:17:43 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Mon Sep 29 2025 11:44:15 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="68d4e28b447569f615f93844" data-wf-site="68d4e28a447569f615f93799">
 <head>
   <meta charset="utf-8">
@@ -7,33 +7,6 @@
   <meta content="Not Found" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <!-- Google Analytics 4 (deferred until user consent) -->
-  <script>
-    (function(){
-      var COOKIE_KEY = 'rafaels_portfolio_cookie_consent_v1';
-      function getConsent(){ try{return JSON.parse(localStorage.getItem(COOKIE_KEY))||{};}catch(e){return {};}}
-      function saveConsent(c){ try{ localStorage.setItem(COOKIE_KEY, JSON.stringify(c)); }catch(e){}
-      }
-      function loadGtag(){ if(window.__gtag_loaded) return; window.__gtag_loaded = true;
-        var s = document.createElement('script');
-        s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZY7K98J5TB';
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function(){ dataLayer.push(arguments); };
-        gtag('js', new Date());
-        gtag('config', 'G-ZY7K98J5TB', {
-          'page_title': document.title || 'Not Found',
-          'page_location': location.href || 'https://rafaelschranz.com',
-          'send_page_view': true
-        });
-      }
-      window.__rafaelCookie = {
-        get: getConsent,
-        set: function(c){ var cur = getConsent(); Object.assign(cur, c); saveConsent(cur); if(cur.analytics) loadGtag(); }
-      };
-      try{ if(getConsent().analytics){ loadGtag(); } }catch(e){}
-    })();
-  </script>
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/rafael-schranz-784c8b.webflow.css" rel="stylesheet" type="text/css">
@@ -67,30 +40,27 @@
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script>
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
-  <!-- Cookie consent banner (Swiss-compliant minimal implementation) -->
-  <div id="cookie-banner" style="position:fixed;left:0;right:0;bottom:18px;margin:0 auto;max-width:980px;background:rgba(17,17,17,0.95);color:#fff;padding:18px;border-radius:8px;display:flex;gap:12px;align-items:center;z-index:9999;font-family:inherit;box-shadow:0 8px 24px rgba(0,0,0,.35)">
-    <div style="flex:1;font-size:14px;line-height:1.4">
-      Diese Webseite verwendet technische Cookies und optionale Analyse-Cookies, um die Nutzung der Website zu messen. Durch "Akzeptieren" erlauben Sie Analytics-Cookies. Weitere Informationen finden Sie in der Datenschutzerklärung.
-    </div>
-    <div style="display:flex;gap:8px;align-items:center">
-      <button id="cookie-reject" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.18);padding:8px 12px;border-radius:6px;cursor:pointer">Ablehnen</button>
-      <button id="cookie-accept" style="background:#4d65ff;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer">Akzeptieren</button>
-    </div>
-  </div>
+</script>
+
+  <!-- Cookie consent and consent-aware Google Analytics loader -->
   <script>
-    (function(){
-      var banner = document.getElementById('cookie-banner');
-      var accept = document.getElementById('cookie-accept');
-      var reject = document.getElementById('cookie-reject');
-      var CONSENT_KEY = 'rafaels_portfolio_cookie_consent_v1';
-      function read(){ try{return JSON.parse(localStorage.getItem(CONSENT_KEY))||{};}catch(e){return{}} }
-      function write(obj){ try{ localStorage.setItem(CONSENT_KEY, JSON.stringify(obj)); }catch(e){} }
-      function hide(){ if(banner) banner.style.display='none'; }
-      var cur = read();
-      if(cur && (typeof cur.analytics !== 'undefined')){ hide(); return; }
-      accept.addEventListener('click', function(){ write({analytics:true}); try{ window.__rafaelCookie && window.__rafaelCookie.set({analytics:true}); }catch(e){} hide(); });
-      reject.addEventListener('click', function(){ write({analytics:false}); try{ window.__rafaelCookie && window.__rafaelCookie.set({analytics:false}); }catch(e){} hide(); });
-      accept.focus();
+    (function () {
+      var STORAGE_KEY = 'rafaels_portfolio_cookie_consent_v1';
+      function getConsent() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) { return {}; } }
+      function setConsent(obj) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(obj || {})); } catch (e) {} }
+      function loadGtag() {
+        if (window.__rafaelCookie && window.__rafaelCookie._gtagLoaded) return;
+        window.__rafaelCookie = window.__rafaelCookie || {};
+        window.__rafaelCookie._gtagLoaded = true;
+        var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZY7K98J5TB'; document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} window.gtag = gtag; gtag('js', new Date()); gtag('config', 'G-ZY7K98J5TB');
+      }
+      window.__rafaelCookie = window.__rafaelCookie || {};
+      window.__rafaelCookie.set = function (obj) { var current = getConsent(); var next = Object.assign({}, current, obj || {}); setConsent(next); if (next.analytics) loadGtag(); };
+      window.__rafaelCookie.get = function () { return getConsent(); };
+      try { var c = getConsent(); if (c && c.analytics) loadGtag(); } catch (e) {}
+      function renderBanner() { try { if (getConsent().hasOwnProperty('analytics')) return; } catch (e) { } var wrapper = document.createElement('div'); wrapper.id = 'rs-cookie-banner'; wrapper.setAttribute('role', 'dialog'); wrapper.style.position = 'fixed'; wrapper.style.left = '1rem'; wrapper.style.right = '1rem'; wrapper.style.bottom = '1rem'; wrapper.style.zIndex = '99999'; wrapper.style.background = '#fff'; wrapper.style.color = '#111'; wrapper.style.borderRadius = '8px'; wrapper.style.boxShadow = '0 8px 30px rgba(0,0,0,0.12)'; wrapper.style.padding = '16px'; wrapper.style.display = 'flex'; wrapper.style.alignItems = 'center'; wrapper.style.justifyContent = 'space-between'; wrapper.style.gap = '12px'; var text = document.createElement('div'); text.style.flex = '1'; text.style.fontSize = '14px'; text.innerHTML = '<strong>Datenschutz</strong> Wir verwenden Cookies zur Analyse der Nutzung. Durch "Akzeptieren" erlauben Sie anonyme Nutzungsdaten (Google Analytics). Mehr Informationen in <a href="datenschutz.html">unserer Datenschutzerklärung</a>.'; var actions = document.createElement('div'); actions.style.display = 'flex'; actions.style.gap = '8px'; var accept = document.createElement('button'); accept.textContent = 'Akzeptieren'; accept.style.background = '#111'; accept.style.color = '#fff'; accept.style.border = 'none'; accept.style.padding = '8px 12px'; accept.style.borderRadius = '6px'; accept.style.cursor = 'pointer'; accept.onclick = function () { window.__rafaelCookie.set({ analytics: true }); document.body.removeChild(wrapper); }; var decline = document.createElement('button'); decline.textContent = 'Ablehnen'; decline.style.background = 'transparent'; decline.style.color = '#111'; decline.style.border = '1px solid rgba(0,0,0,0.1)'; decline.style.padding = '8px 12px'; decline.style.borderRadius = '6px'; decline.style.cursor = 'pointer'; decline.onclick = function () { window.__rafaelCookie.set({ analytics: false }); document.body.removeChild(wrapper); }; actions.appendChild(decline); actions.appendChild(accept); wrapper.appendChild(text); wrapper.appendChild(actions); document.body.appendChild(wrapper); }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', renderBanner); else renderBanner();
     })();
   </script>
 </body>
