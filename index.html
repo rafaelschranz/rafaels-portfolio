@@ -5,6 +5,40 @@
   <title>Rafael Schranz</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
+  <!-- Google Analytics 4 (deferred until user consent)
+       Stream Name: Rafael Schranz
+       Stream URL: https://rafaelschranz.com
+       Stream ID: 8424078388
+       Measurement ID: G-ZY7K98J5TB
+  -->
+  <script>
+    (function(){
+      var COOKIE_KEY = 'rafaels_portfolio_cookie_consent_v1';
+      function getConsent(){ try{return JSON.parse(localStorage.getItem(COOKIE_KEY))||{};}catch(e){return {};}}
+      function saveConsent(c){ try{ localStorage.setItem(COOKIE_KEY, JSON.stringify(c)); }catch(e){}
+      }
+      function loadGtag(){ if(window.__gtag_loaded) return; window.__gtag_loaded = true;
+        var s = document.createElement('script');
+        s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZY7K98J5TB';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){ dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', 'G-ZY7K98J5TB', {
+          'page_title': document.title || 'Rafael Schranz',
+          'page_location': location.href || 'https://rafaelschranz.com',
+          'send_page_view': true
+        });
+      }
+      // Expose API for banner to use
+      window.__rafaelCookie = {
+        get: getConsent,
+        set: function(c){ var cur = getConsent(); Object.assign(cur, c); saveConsent(cur); if(cur.analytics) loadGtag(); }
+      };
+      // Auto-load if consent already given
+      try{ if(getConsent().analytics){ loadGtag(); } }catch(e){}
+    })();
+  </script>
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/rafael-schranz-784c8b.webflow.css" rel="stylesheet" type="text/css">
@@ -401,7 +435,7 @@ margin: 0rem !important;
                     <div class="margin-bottom margin-small">
                       <h2 class="heading-style-h2">Wer ist Rafael?</h2>
                     </div>
-                    <p class="text-size-medium">Rafael Schranz ist Mediamatiker EFZ mit Leidenschaft für Webdesign, digitale Kommunikation und neue Technologien.  Mit Erfahrung in Webflow, Adobe Creative Cloud, SEO/Analytics und Automatisierung gestaltet er digitale Lösungen, die Kreativität und Funktionalität verbinden.</p>
+                    <p class="text-size-medium">Rafael Schranz ist Mediamatiker EFZ mit Leidenschaft für Webdesign, digitale Kommunikation und neue Technologien. Mit Erfahrung in Webflow, Adobe Creative Cloud, SEO/Analytics und Automatisierung gestaltet er digitale Lösungen, die Kreativität und Funktionalität verbinden.</p>
                   </div>
                   <div class="startseite_feature-sektion-3_image-wrapper"><img sizes="(max-width: 2600px) 100vw, 2600px" srcset="images/6680220c2d0277bfa0689204_rafaelquer_1-p-2600-p-500.jpg 500w, images/6680220c2d0277bfa0689204_rafaelquer_1-p-2600-p-800.jpg 800w, images/6680220c2d0277bfa0689204_rafaelquer_1-p-2600-p-1080.jpg 1080w, images/6680220c2d0277bfa0689204_rafaelquer_1-p-2600-p-1600.jpg 1600w, images/6680220c2d0277bfa0689204_rafaelquer_1-p-2600-p-2000.jpg 2000w, images/6680220c2d0277bfa0689204_rafaelquer_1-p-2600.jpg 2600w" alt="" src="images/6680220c2d0277bfa0689204_rafaelquer_1-p-2600.jpg" loading="lazy" class="startseite_feature-sektion-3_image"></div>
                 </div>
@@ -521,8 +555,8 @@ margin: 0rem !important;
                 <div class="footer11_bottom-wrapper">
                   <div class="footer11_credit-text">© 2024 Rafael Schranz. Alle rechte vorbehalten.</div>
                   <div class="w-layout-grid footer11_legal-list">
-                    <a href="#" class="footer11_legal-link">Datenschutz</a>
-                    <a href="#" class="footer11_legal-link">Nutzungsbedingungen</a>
+                    <a href="datenschutz.html" class="footer11_legal-link">Datenschutz</a>
+                    <a href="impressum.html" class="footer11_legal-link">Impressum</a>
                   </div>
                 </div>
               </div>
@@ -537,5 +571,34 @@ margin: 0rem !important;
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script>
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
+  <!-- Cookie consent banner (Swiss-compliant minimal implementation) -->
+  <div id="cookie-banner" style="position:fixed;left:0;right:0;bottom:18px;margin:0 auto;max-width:980px;background:rgba(17,17,17,0.95);color:#fff;padding:18px;border-radius:8px;display:flex;gap:12px;align-items:center;z-index:9999;font-family:inherit;box-shadow:0 8px 24px rgba(0,0,0,.35)">
+    <div style="flex:1;font-size:14px;line-height:1.4">
+      Diese Webseite verwendet technische Cookies und optionale Analyse-Cookies, um die Nutzung der Website zu messen. Durch "Akzeptieren" erlauben Sie Analytics-Cookies. Weitere Informationen finden Sie in der Datenschutzerklärung.
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button id="cookie-reject" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.18);padding:8px 12px;border-radius:6px;cursor:pointer">Ablehnen</button>
+      <button id="cookie-accept" style="background:#4d65ff;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer">Akzeptieren</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var banner = document.getElementById('cookie-banner');
+      var accept = document.getElementById('cookie-accept');
+      var reject = document.getElementById('cookie-reject');
+      var CONSENT_KEY = 'rafaels_portfolio_cookie_consent_v1';
+      function read(){ try{return JSON.parse(localStorage.getItem(CONSENT_KEY))||{};}catch(e){return{}} }
+      function write(obj){ try{ localStorage.setItem(CONSENT_KEY, JSON.stringify(obj)); }catch(e){} }
+      function hide(){ if(banner) banner.style.display='none'; }
+      var cur = read();
+      // If user already made a choice, hide banner
+      if(cur && (typeof cur.analytics !== 'undefined')){ hide(); return; }
+      // Show banner (already in DOM by default)
+      accept.addEventListener('click', function(){ write({analytics:true}); try{ window.__rafaelCookie && window.__rafaelCookie.set({analytics:true}); }catch(e){} hide(); });
+      reject.addEventListener('click', function(){ write({analytics:false}); try{ window.__rafaelCookie && window.__rafaelCookie.set({analytics:false}); }catch(e){} hide(); });
+      // Respect reduced motion or other accessibility needs: focus accept
+      accept.focus();
+    })();
+  </script>
 </body>
 </html>
